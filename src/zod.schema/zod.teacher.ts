@@ -20,5 +20,6 @@ export const getTeacherByIdType = z.object({
 });
 
 export type createTeacherTypeSchema = TypeOf<typeof createTeacherType>['body'];
-export type getTeacherByIdTypeSchema = TypeOf<typeof getTeacherByIdType>['body'];
-
+export type getTeacherByIdTypeSchema = TypeOf<
+  typeof getTeacherByIdType
+>['body'];

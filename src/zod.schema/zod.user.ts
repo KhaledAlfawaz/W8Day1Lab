@@ -24,11 +24,11 @@ const userObj = z.object({
 });
 
 export const createUserType = z.object({
-  body: userObj.omit({ userId: true , img:true }),
+  body: userObj.omit({ userId: true, img: true }),
 });
 
 export const createProfileType = z.object({
-  body: userObj.pick({ userId: true , img:true }),
+  body: userObj.pick({ userId: true, img: true }),
 });
 
 export type createUserTypeSchema = TypeOf<typeof createUserType>['body'];

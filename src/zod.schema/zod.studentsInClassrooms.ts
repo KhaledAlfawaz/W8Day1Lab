@@ -19,7 +19,6 @@ export const addStudentToClassroomType = z.object({
   body: studentInClassroomsObj.omit({ id: true }),
 });
 
-
-export type addStudentToClassroomTypeSchema = TypeOf<typeof addStudentToClassroomType>['body'];
-
-
+export type addStudentToClassroomTypeSchema = TypeOf<
+  typeof addStudentToClassroomType
+>['body'];

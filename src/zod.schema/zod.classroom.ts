@@ -9,10 +9,10 @@ const classroomObj = z.object({
     required_error: 'name is required',
     invalid_type_error: 'name must be string',
   }),
-  teacherId:z.string({
+  teacherId: z.string({
     required_error: 'teacherId is required',
     invalid_type_error: 'teacherId must be string',
-  })
+  }),
 });
 
 export const createClassroomType = z.object({
@@ -23,6 +23,9 @@ export const getClassroomByIdType = z.object({
   body: classroomObj.pick({ id: true }),
 });
 
-export type createClassroomTypeSchema = TypeOf<typeof createClassroomType>['body'];
-export type getClassroomByIdTypeSchema = TypeOf<typeof getClassroomByIdType>['body'];
-
+export type createClassroomTypeSchema = TypeOf<
+  typeof createClassroomType
+>['body'];
+export type getClassroomByIdTypeSchema = TypeOf<
+  typeof getClassroomByIdType
+>['body'];
